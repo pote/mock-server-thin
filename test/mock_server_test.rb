@@ -1,4 +1,4 @@
-require File.expand_path(File.join(File.dirname(__FILE__), "..", "lib", "mock_server"))
+require File.expand_path(File.join(File.dirname(__FILE__), "..", "lib", "mock_server_thin"))
 
 require "test/unit"
 require "ruby-debug"
@@ -12,7 +12,7 @@ end
 
 class MockServerTest < Test::Unit::TestCase
   def setup
-    @server = MockServer.new(HelloWorldSinatra)
+    @server = MockServerThin.new(HelloWorldSinatra)
     @server.start
   end
 
@@ -29,7 +29,7 @@ end
 
 class MockServerRackBuilderTest < Test::Unit::TestCase
   def setup
-    @server = MockServer.new(HelloWorldRackBuilder, 4001)
+    @server = MockServerThin.new(HelloWorldRackBuilder, 4001)
     @server.start
   end
 
@@ -38,7 +38,7 @@ class MockServerRackBuilderTest < Test::Unit::TestCase
   end end
 
 class MockServerMethodsTest < Test::Unit::TestCase
-  extend MockServer::Methods
+  extend MockServerThin::Methods
 
   mock_server(4002) {
     get "/" do

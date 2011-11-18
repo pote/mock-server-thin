@@ -12,7 +12,7 @@ is to lay out an environment where your code can still run, connect to
 a web server, send out requests and get responses back. Enter MockServer.
 
     class RSSFeedTest < Test::Unit::TestCase
-      extend MockServer::Methods
+      extend MockServerThin::Methods
 
       mock_server {
         get "/feed.xml" do
