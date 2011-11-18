@@ -1,11 +1,12 @@
 Gem::Specification.new do |s|
-  s.name        = "mock-server"
-  s.version     = "0.1.1"
+  s.name        = "mock-server-thin"
+  s.version     = "0.1"
   s.summary     = %{A quick way of mocking an external web service you want to consume.}
-  s.authors     = ["Damian Janowski"]
-  s.email       = ["djanowski@dimaion.com"]
-  s.homepage    = "http://github.com/djanowski/mock-server"
+  s.authors     = ["Damian Janowski", "Pablo Astigarraga"]
+  s.email       = ["djanowski@dimaion.com", "pote@tardis.com.uy"]
+  s.homepage    = "http://github.com/pote/mock-server-thin"
   s.files       = <%= Dir['lib/**/*.rb', 'README.markdown', 'LICENSE', 'Rakefile', 'rails/**/*', 'test/**/*.*'].inspect %>
 
   s.add_dependency "sinatra"
+  s.add_dependency "thin"
 end

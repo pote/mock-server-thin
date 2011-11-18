@@ -14,7 +14,7 @@ class MockServer
   def start
     Thread.new do
       with_quiet_logger do |logger|
-        Rack::Handler::WEBrick.run(@app, :Port => @port, :Logger => logger, :AccessLog => [])
+        Rack::Handler::Thin.run(@app, :Port => @port, :Logger => logger, :AccessLog => [])
       end
     end
 
