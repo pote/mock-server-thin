@@ -1,4 +1,4 @@
-# MockServer #
+# MockServerThin #
 
 A quick way of mocking an external web service you want to consume.
 
