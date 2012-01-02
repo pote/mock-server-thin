@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "mock-server-thin"
-  s.version     = "0.1.1"
+  s.version     = "0.2"
   s.summary     = %{A quick way of mocking an external web service you want to consume.}
   s.authors     = ["Damian Janowski", "Pablo Astigarraga"]
   s.email       = ["djanowski@dimaion.com", "pote@tardis.com.uy"]
